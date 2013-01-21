@@ -1,4 +1,14 @@
-deploy_mpicluster
-=================
+Deployment Script of MPI Cluster
+====================================
 
-Deployment script of MPI Cluster
+This script build MPI Cluster on OpenStack instances.
+
+Requirements
+---------------
+* Python 2.7
+* Fabric
+* Instances with Ephemeral storage(/dev/vdb).
+
+How to
+--------
+
