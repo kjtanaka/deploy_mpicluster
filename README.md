@@ -45,7 +45,7 @@ Install compute nodes
 fab -H 172.20.101.109,172.20.101.113,172.20.101.143 setup_compute:mgmt=your-mgmt
 ```
 
-The installation is done and you should be able to login as ubuntu and run mpi on your-cmpt01, your-cmpt02 and your-cmpt03.
+The installation is done and you should be able to login as ubuntu, and able to run MPI on your compute nodes.
 
 ```
 ssh ubuntu@172.20.101.109
