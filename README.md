@@ -42,15 +42,15 @@ fab -H 172.20.101.112 setup_mgmt:subnet=10.1.2.0/24
 
 Install compute nodes
 ```
-fab -H 172.20.101.109,172.20.101.113,172.20.101.143 setup_compute:mgmt=ktanaka-mgmt
+fab -H 172.20.101.109,172.20.101.113,172.20.101.143 setup_compute:mgmt=your-mgmt
 ```
 
-The installation is done and you should be able to login as ubuntu and run mpi on ktanaka-cmpt01, ktanaka-cmpt02 and ktanaka-cmpt03.
+The installation is done and you should be able to login as ubuntu and run mpi on your-cmpt01, your-cmpt02 and your-cmpt03.
 
 ```
 ssh ubuntu@172.20.101.109
 mpicc ....
-mpirun -np 6 -host ktanaka-cmpt01,ktanaka-cmpt02,ktanaka-cmpt03 ...
+mpirun -np 6 -host your-cmpt01,your-cmpt02,your-cmpt03 ...
 ```
 By the way, shared scratch space is /scratch. Check your /etc/fstab for more information.
 
