@@ -41,4 +41,5 @@ def install_IMB_3_2_3(tarfile):
   with cd('~/'):
     run('tar zxvf IMB_3.2.3.tgz')
   with cd('~/imb_3.2.3/src'):
+    run('sed -i 's/mpiicc/mpicc/' make_ict')
     run('make')
