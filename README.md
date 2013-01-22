@@ -15,7 +15,7 @@ How to
 --------
 This example is to build 1 nfs node and 3 compute nodes with image id 6d2bca76-8fff-4d57-9f29-50378539b4fa.
 
-Boot 1 nfs nodes, 3 compute nodes.
+Boot 4 instances(1 nfs nodes, 3 compute nodes).
 ```
 nova boot --image 6d2bca76-8fff-4d57-9f29-50378539b4fa --flavor m1.medium --key-name your_key your-mgmt
 nova boot --image 6d2bca76-8fff-4d57-9f29-50378539b4fa --flavor m1.medium --key-name your_key your-cmpt01
