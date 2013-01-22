@@ -64,9 +64,13 @@ http://software.intel.com/en-us/articles/intel-mpi-benchmarks/
 And run this command with one of your compute node.
 ```
 fab -H 172.20.101.109 install_IMB_3_2_3:tarfile=/path/to/your/IMB_3.2.3.tgz
+```
+
+Now you can run the benchmark. So login to one of your compute nodes and try benchmark.
+```
 ssh ubuntu@172.20.101.109
 mpirun -np 2 -host your-cmpt01,your-cmpt02 imb_3.2.3/src/IMB-MPI1 pingpong
 mpirun -np 6 -host your-cmpt01,your-cmpt02,your-cmpt03 imb_3.2.3/src/IMB-MPI1 bcast
 ```
 
-
+For more information, read imb_3.2.3/doc/ReadMe_IMB.txt.
