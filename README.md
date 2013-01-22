@@ -14,6 +14,10 @@ Requirements
 How to
 --------
 This example is to build 1 nfs node and 3 compute nodes with image id 6d2bca76-8fff-4d57-9f29-50378539b4fa.
+```
+nova image-list|grep common
+| 6d2bca76-8fff-4d57-9f29-50378539b4fa | common/precise-server-cloudimg-amd64.img.manifest.xml | ACTIVE | |
+```
 
 Boot 4 instances(1 nfs nodes, 3 compute nodes).
 ```
