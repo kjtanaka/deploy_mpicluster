@@ -1,7 +1,7 @@
 Deployment Script of MPI Cluster
 ====================================
 
-This script build MPI Cluster on OpenStack instances.
+This script build MPI Cluster on Ubuntu-12.04/12.10 instances on OpenStack.
 
 Requirements
 ---------------
