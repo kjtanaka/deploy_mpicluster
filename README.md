@@ -54,7 +54,7 @@ mpirun -np 6 -host ktanaka-cmpt01,ktanaka-cmpt02,ktanaka-cmpt03 ...
 ```
 Shared scratch space is /scratch.
 
-Install Intel MPI Benchmarks 3.2.3
+Want to try Intel MPI Benchmarks 3.2.3?
 ----------------------------------
 If you want to try benchmark, Intel MPI Benchmarks 3.2.3 is good and easy to try.
 Download it from the link.
