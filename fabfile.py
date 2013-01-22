@@ -8,7 +8,7 @@ from fabric.decorators import runs_once
 env.user = 'ubuntu'
 #env.parallel=True
 
-def setup_mgmt():
+def setup_mgmt(subnet):
   sudo ('apt-get update', pty=True)
   sudo('apt-get -y install nfs-server build-essential', pty=True)
 
@@ -22,13 +22,13 @@ def setup_mgmt():
   sudo('mount /dev/vdb /scratch', pty=True)
   sudo('mkdir /scratch/ubuntu', pty=True)
   sudo('chown -R ubuntu:ubuntu /scratch/ubuntu', pty=True)
-  sudo('echo "/scratch 10.1.2.0/24(rw,sync,no_subtree_check)" >> /etc/exports', pty=True)
-  sudo('echo "/home 10.1.2.0/24(rw,sync,no_subtree_check)" >> /etc/exports', pty=True)
+  sudo('echo "/scratch %s(rw,sync,no_subtree_check)" >> /etc/exports' % (subnet), pty=True)
+  sudo('echo "/home %s(rw,sync,no_subtree_check)" >> /etc/exports' % (subnet), pty=True)
   sudo('exportfs -ra', pty=True)
 
 def setup_compute(mgmt):
   sudo ('apt-get update', pty=True)
-  sudo('apt-get -y install nfs-client mpi-default-dev build-essential', pty=True)
+  sudo('apt-get -y install nfs-client openmpi-bin mpi-default-dev build-essential', pty=True)
   sudo('ln -s /usr/bin/make /usr/bin/gmake', pty=True)
   sudo('mkdir /scratch', pty=True)
   sudo("echo %s:/scratch /scratch nfs rsize=8192,wsize=8192,timeo=14,intr >> /etc/fstab" % (mgmt),
@@ -38,7 +38,7 @@ def setup_compute(mgmt):
 
 def install_IMB_3_2_3(tarfile):
   put("%s" % tarfile, "~/IMB_3.2.3.tgz")
-  with cd('~/')
+  with cd('~/'):
     run('tar zxvf IMB_3.2.3.tgz')
-  with cd('~/imb_3.2.3/src')
+  with cd('~/imb_3.2.3/src'):
     run('make')
