@@ -52,11 +52,11 @@ ssh ubuntu@172.20.101.109
 mpicc ....
 mpirun -np 6 -host ktanaka-cmpt01,ktanaka-cmpt02,ktanaka-cmpt03 ...
 ```
-Shared scratch space is /scratch.
+By the way, shared scratch space is /scratch. Check your /etc/fstab for more information.
 
 Want to try Intel MPI Benchmarks 3.2.3?
 ----------------------------------
-If you want to try benchmark, Intel MPI Benchmarks 3.2.3 is good and easy to try.
+If you want to try some benchmark, Intel MPI Benchmarks 3.2.3 is good and easy to try.
 Download it from the link.
 
 http://software.intel.com/en-us/articles/intel-mpi-benchmarks/
