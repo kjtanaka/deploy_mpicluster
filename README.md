@@ -19,8 +19,8 @@ Boot 1 nfs nodes, 3 compute nodes.
 ```
 nova boot --image 6d2bca76-8fff-4d57-9f29-50378539b4fa --flavor m1.medium --key-name your_key your-mgmt
 nova boot --image 6d2bca76-8fff-4d57-9f29-50378539b4fa --flavor m1.medium --key-name your_key your-cmpt01
-nova boot --image 6d2bca76-8fff-4d57-9f29-50378539b4fa --flavor m1.medium --key-name key1 your-cmpt02
-nova boot --image 6d2bca76-8fff-4d57-9f29-50378539b4fa --flavor m1.medium --key-name key1 your-cmpt03
+nova boot --image 6d2bca76-8fff-4d57-9f29-50378539b4fa --flavor m1.medium --key-name your_key your-cmpt02
+nova boot --image 6d2bca76-8fff-4d57-9f29-50378539b4fa --flavor m1.medium --key-name your_key your-cmpt03
 
 nova list|grep your-
 | 2c90dbdc-f4bf-4bdd-a91f-c68e6a943dc1 | your-mgmt     | ACTIVE  | vlan102=10.1.2.107, 172.20.101.112 |
